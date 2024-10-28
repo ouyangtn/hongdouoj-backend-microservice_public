@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: hongdouoj-backend-user-service
+          uri: lb://hongdouoj-backend-user-service
+          predicates:
+            - Path=/api/user/**
+        - id: hongdouoj-backend-judge-service
+          uri: lb://hongdouoj-backend-judge-service
+          predicates:
+            - Path=/api/judge/**
+        - id: hongdouoj-backend-question-service
+          uri: lb://hongdouoj-backend-question-service
+          predicates:
+            - Path=/api/question/**
+  application:
+    name: hongdouoj-backend-gateway
+  main:
+    web-application-type: reactive
+server:
+  port: 8101
+knife4j:
+  gateway:
+#    第一个配置，开启gateway聚合组件
+    enabled: true
+#    第二行配置,设置聚合模式采用discover服务发现的模式
+    strategy: discover
+#    第三行配置,开启discovery 模式
+    discover:
+      enabled: true
+#      第四行配置,聚合服务全部为Swagger2规范的文档
+      version: swagger2
