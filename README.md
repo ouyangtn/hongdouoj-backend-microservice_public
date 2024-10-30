@@ -12,13 +12,15 @@ OJ 编程题目测评系统。
 
 
 #### 核心业务流程
-
 ![输入图片说明](https://foruda.gitee.com/images/1730272270286943059/568aabda_13041225.png "屏幕截图")
+
+
 #### 时序图
-![输入图片说明](https://foruda.gitee.com/images/1730272308371176086/16f538d8_13041225.png "屏幕截图")
+![输入图片说明](image.png)
+
 
 #### 技术选型
-####后端
+后端：
 - Java Spring Cloud +Spring Cloud Alibaba微服务
     - Nacos注册中心
     - Open Feign客户端调用
@@ -39,3 +41,15 @@ OJ 编程题目测评系统。
      - 代理模式
      - 其他模板方法
 - 这里是列表文本其他：部分并发编程、JVM 小知识
+
+前端：
+- Vue3
+- Vue-CLI脚手架
+- VUex状态管理
+- Arco Dseign组件库
+- 前端工程化：Eslint + Prettier + TypeScript
+- 手写前端项目模板（通用布、权限管理、状态管理、菜单生成）
+- Markdown富文本编辑器
+- Monaco Editor代码编辑器
+- OpenAPI 前端代码生成
+
