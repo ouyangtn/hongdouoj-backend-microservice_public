@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 帖子
  *
- * @author <a href="https://github.com/liyupi">程序员红逗</a>
+ * @author <a href="https://github.com/ouyangtn">程序员红逗</a>
  * @from <a href="https://gitee.com/ouyang-jianli">gitee</a>
  */
 @TableName(value = "post")
