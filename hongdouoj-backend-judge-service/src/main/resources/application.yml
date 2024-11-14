@@ -20,20 +20,20 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/hdoj
-    username: root
-    password: 20182018Aa
+    username: xxxx
+    password: xxxxxxxx
   # Redis 配置
   redis:
     database: 1
     host: localhost
     port: 6379
     timeout: 5000
-#    password: 20182018Aa
+#    password: xxxxxxxx
   rabbitmq:
     host: localhost
     port: 5672
-    password: guest
-    username: guest
+    password: xxxxx
+    username: xxxxx
   # 文件上传
   servlet:
     multipart:

@@ -1,0 +1,53 @@
+services:
+  hongdouoj-backend-gateway:
+    container_name: hongdouoj-backend-gateway
+    build:
+      context: ./hongdouoj-backend-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8101:8101"
+    networks:
+      - mynetwork
+
+  hongdouoj-backend-user-service:
+    container_name: hongdouoj-backend-user-service
+    build:
+      context: ./hongdouoj-backend-user-service
+      dockerfile: Dockerfile
+    ports:
+      - "8102:8102"
+    networks:
+      - mynetwork
+    depends_on:
+      - hongdouoj-backend-gateway
+
+  hongdouoj-backend-question-service:
+    container_name: hongdouoj-backend-question-service
+    build:
+      context: ./hongdouoj-backend-question-service
+      dockerfile: Dockerfile
+    ports:
+      - "8103:8103"
+    networks:
+      - mynetwork
+    depends_on:
+      - hongdouoj-backend-user-service
+      - hongdouoj-backend-gateway
+
+  hongdouoj-backend-judge-service:
+    container_name: hongdouoj-backend-judge-service
+    build:
+      context: ./hongdouoj-backend-judge-service
+      dockerfile: Dockerfile
+    ports:
+      - "8104:8104"
+    networks:
+      - mynetwork
+    depends_on:
+      - hongdouoj-backend-user-service
+      - hongdouoj-backend-question-service
+      - hongdouoj-backend-gateway
+
+# 网络，不定义的话就是默认网络
+networks:
+  mynetwork:
