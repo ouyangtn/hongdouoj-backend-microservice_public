@@ -16,7 +16,8 @@ OJ 编程题目测评系统。
 
 
 #### 时序图
-![输入图片说明](image.png)
+![image](https://github.com/user-attachments/assets/a29d9470-c25b-4c5d-a841-b0c82810b198)
+
 
 
 #### 技术选型
